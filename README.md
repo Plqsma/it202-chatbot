@@ -1,2 +1,2 @@
 # it202-chatbot
-A secure web-based system using HTML, CSS, JavaScript, PHP, and MySQL. 
+A secure chatbot website using HTML, CSS, JavaScript, JQuery, PHP and MySQL
