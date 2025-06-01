@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h1>Current Users:</h1>
+    <ul id="userList"></ul>
+
+    <h1>Login</h1>
+    <form id="loginForm" action="login.php" method="post">
+        Username: <input type="text" name="username"><br>
+        Password: <input type="password" name="password"><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                type: "GET",
+                url: "getCurrentUsers.php",
+                success: function(users) {
+                    $("#userList").html(users);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
